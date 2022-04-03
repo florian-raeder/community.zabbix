@@ -175,13 +175,13 @@ class MaintenanceModule(ZabbixBase):
                 "hostids": host_ids,
                 "name": name,
                 "maintenance_type": maintenance_type,
-                "active_since": str(start_time),
-                "active_till": str(end_time),
+                "active_since": int(start_time),
+                "active_till": int(end_time),
                 "description": desc,
                 "timeperiods": [{
                     "timeperiod_type": "0",
-                    "start_date": str(start_time),
-                    "period": str(period),
+                    "start_date": int(start_time),
+                    "period": period,
                 }]
             }
             if tags is not None:
@@ -201,13 +201,13 @@ class MaintenanceModule(ZabbixBase):
                 "groupids": group_ids,
                 "hostids": host_ids,
                 "maintenance_type": maintenance_type,
-                "active_since": str(start_time),
-                "active_till": str(end_time),
+                "active_since": int(start_time),
+                "active_till": int(end_time),
                 "description": desc,
                 "timeperiods": [{
                     "timeperiod_type": "0",
-                    "start_date": str(start_time),
-                    "period": str(period),
+                    "start_date": int(start_time),
+                    "period": period,
                 }]
             }
             if tags is not None:
